@@ -328,6 +328,7 @@ extension PhotoBrowser: UIViewControllerTransitioningDelegate {
         let imageView = UIImageView(image: cell.imageView.image)
         imageView.contentMode = imageScaleMode
         imageView.clipsToBounds = true
+        self.presentingVC.viewDidAppear(true)
         return ScaleAnimator(startView: cell.imageView, endView: relatedView, scaleView: imageView)
     }
     
